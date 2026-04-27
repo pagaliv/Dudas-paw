@@ -1,0 +1,74 @@
+\chapter{Arquitectura}
+\section*{2a Arquitectura web}
+\subsection*{Dudas de conocimiento}
+Mi mayor problema en este apartado más que entender la información y los conceptos es saber que es lo importante y la información que do obtener de esta.
+
+
+Las ideas que hay que sacar de esta parte son:
+\begin{itemize}
+    \item  Diferencia sitios estaticos vs sitios dinamicos y como funciona cada uno 
+    \item Principios diseño software: \begin{itemize}
+        \item SOLID
+        \item KISS (KEEP IT SUPER SIMPLE)
+        \item YAGNI (YOU AREN´T GONNA NEED IT)
+        \item DRY (DON'T REPEAT YOURSELF)
+    \end{itemize}
+    \item  Razones por las que reutilizar codigo. 
+\end{itemize}
+\subsection*{Dudas de contenido para el examen}
+\begin{enumerate}
+    \item ¿Hay que saber los ejemplos de CGI que se muestran en las diapos de la 28 a la 32?
+    \item Los principios de diseño software ¿hay que saberlos de memoria o solo entenderlos y saber aplicarlos?
+\end{enumerate}
+
+
+
+\section*{2b Arquitectura web}
+\subsection*{Dudas de conocimiento}
+\begin{itemize}
+    \item ¿Los filters y los controllers son de a capa de presentación?
+    \item No entiendo el problema de la diapositiva 25,26 de Model 1, me refiero, si se produce un error en el proceso no es su responsabilidad, no? simplemente se reenvia a una pagina de error, me refieor, si ya has enviado la mitad de la info y se produce un error con la base de datos no es responsabilidad de la capa de presentación, simplenente redirije a la pagina de error.
+    \item No entiendo muy bien las diferencias de la diapositiva 34 de diferencias entre Model 1 y 2, del data push vs Data pull. Lo que he entendido es que el model 1 pide los datos, es decir hace una llamada a Persistencia y el model 2 us el controlador para enviarlos directamente sin que los pida porque los necesita. 
+    \item En resumen para entenderlo, el model 2 la diferencia pricipal es el controlador que hace de capa intermedia y reparte los recursos y esto le da varias ventajas como no introducir tanto codigo, no repetir codigo o no empezar a enviar una vista y que luego de error. 
+\end{itemize}
+
+\textbf{No es una duda, pero hay una errata en la diapositiva 40,, escribe la mantenibilidad junto en vez de separado}
+
+Las ideas que hay que sacar de esta parte son:
+\begin{itemize}
+    \item  Model 0
+    \item Model 1
+    \item Patrón MVC (Model 2)
+\end{itemize}
+
+\subsection*{Dudas de contenido para el examen}
+
+\begin{enumerate}
+    \item ¿Hay que saberse de memoria los distintos Frameworks de MVC que se muestran en la diapo 48?
+\end{enumerate}
+
+\section*{2c Arquitectura web- Tecnologias Java}
+\subsection*{Dudas de conocimiento}
+
+Las ideas que hay que sacar de esta parte son:
+\begin{itemize}
+    \item  Entorno Java EE: aplicación web, saberse que es y que contiene y como se puede desplegar.
+    \item Apache tomcat 
+    \item Integración del servidor
+    \item Concepto de Servlet
+    \item Concepto de Context
+    \item Archivo WAR concepto y funcionamiento 
+    \item dir WEB-INF y su contenido
+    \item web.xml y su contenido
+\end{itemize}
+
+\subsection*{Dudas de contenido para el examen}
+\begin{itemize}
+    \item De la diapo 4 hay que saberse los cambios que se han producidp de una version a otra de java ee y jakarta?
+    \item Lo mismo sobre las API Servlet de diapo 14. 
+    \item Hay que saberse de memoria la estructura de una archivo war como la diapo 18 o solo entenderla y saber que es cada cosa y poder hubicarla donde debe ir?
+\end{itemize}
+
+
+\section*{2d Estilos Arquitectonicos}
+\subsection*{Dudas de conocimiento}
