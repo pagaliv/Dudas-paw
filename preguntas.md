@@ -55,8 +55,15 @@ class UsuarioController {
   ...
 }
 ```
-
-El endpoint de creación con Spring:
+### Endpoints en Sping
+#### Endpoint ver todos usuarios 
+```java
+@GetMapping
+public List<UsuarioEntity> getAll(){
+ return ur.getAll();
+}
+```
+#### Endpoint Creacion
 
 ```java
 @PostMapping
