@@ -252,3 +252,4 @@ _ Un ejemplo de como implementar algo en Thymeleaf o un JSP.
 - De teoria las diapositivas de arquitecturas que no hemos implementado como la hexagonal o la bola de barro no la va a preguntar.
 - De css lo único que puede preguntar ha dicho que es la prioridad de comportamiento.
 - Diferencias entre Model 0,1,2
+- Hacer el pool de conexiones e implementar uno o varios de sus metodos.
