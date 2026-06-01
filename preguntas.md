@@ -63,6 +63,14 @@ public List<UsuarioEntity> getAll(){
  return ur.getAll();
 }
 ```
+#### Endpoint ver un usuario
+```java
+@GetMapping(/{id})
+public UsuarioEntity getbyId(@PathVariable string id){
+ return ur.getById(id).orElseThrow(new ExcepcionDeApp("no existe el elemento");)
+//se puede hacer tambien con un if comproband si esta vacio.
+}
+```
 #### Endpoint Creacion
 
 ```java
