@@ -88,6 +88,7 @@ public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, Ht
   //HttpStatus.CREATED es una constante de Spring que representa el número 201
 }
 ```
+#### Endpoint mod entero
 ```java
 @PutMapping(\{id})
 public UsuarioEntity update(@PathVariable id, RequestBody UsuarioEntity nuevosDatos, HttpSession s){
