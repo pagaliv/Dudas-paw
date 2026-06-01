@@ -3,7 +3,7 @@
 <!-- Banner animado con nombre -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=140&section=header&text=EJERCICIOS%20PAW&fontSize=42&fontColor=58a6ff&fontAlignY=55&animation=fadeIn&desc=Computer%20Engineering%20%40%20Universidad%20de%20La%20Rioja&descColor=8b949e&descSize=16&descAlignY=75"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=3500&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Autores+Pablo+Galilea+Jacobo+Ruiz+%F0%9F%8E%93;Ejercicios+%26+para+examen+final)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=3500&pause=1000&color=58A6FF&center=true&vCenter=true&width=500&lines=Autores+Pablo+Galilea+y+Jacobo+Ruiz+%F0%9F%8E%93;Ejercicios+para+examen+final)](https://git.io/typing-svg)
 
 <br/>
 # Ejercicios de examen 
