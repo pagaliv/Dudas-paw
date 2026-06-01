@@ -1,5 +1,5 @@
  <div align="center">
- 
+
 <!-- Banner animado con nombre -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1a2e,100:16213e&height=140&section=header&text=EJERCICIOS%20PAW&fontSize=42&fontColor=58a6ff&fontAlignY=55&animation=fadeIn&desc=Computer%20Engineering%20%40%20Universidad%20de%20La%20Rioja&descColor=8b949e&descSize=16&descAlignY=75"/>
 
@@ -32,7 +32,8 @@ Responsabilidades:
 
 ## Ejercicio 2
 
-API REST para una aplicación y queremos hacer unos endpoints para usuarios acceder a la información de usuarios es publico. Cambiar los requiere login y no se pueden borrar.
+API REST para una aplicación y queremos hacer unos endpoints para que los usuarios puedan puedan acceder a la información de usuarios. Los endpoints de aceso a los datos son públicos.
+Cambiar los datos requiere _login_ y no se permite el borrado.
 
 Haz el controlador y razona las decisiones.
 
@@ -55,8 +56,11 @@ class UsuarioController {
   ...
 }
 ```
-### Endpoints en Sping
-#### Endpoint ver todos usuarios 
+
+### Endpoints en Spring
+
+#### Endpoint para ver todos los usuarios
+
 ```java
 @GetMapping
 public List<UsuarioEntity> getAll(){
@@ -87,9 +91,9 @@ public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, Ht
 
 Hay que decir:
 
-> El framework (spring) se encarga de leer de la request la entidad del usuario `UsuarioEntity`.
+> El framework (Spring) se encarga de leer de la _request_ la entidad del usuario `UsuarioEntity`.
 
-Otra opción sería poner en la implementación la creación de usuario entity
+Otra opción sería poner en la implementación la creación de un nuevo `UsuarioEntity`:
 
 ```java
 public create(HttpRequest req, HttpResponse resp) {
@@ -106,7 +110,7 @@ public create(HttpRequest req, HttpResponse resp) {
 
 ## Ejercicio 3
 
-¿Cómo navegarías este árbol con DOM hasta llegar a la segunda imagen y cambiar la imagen por `perro.png`?
+¿Cómo navegarías este árbol con DOM hasta llegar a la segunda etiqueta `<img>` y cambiar la imagen por `perro.png`?
 
 ```html
 <html>
@@ -153,7 +157,7 @@ Tenemos este HTML
 </ul>
 ```
 
-Añadir una nueva tarea con título "Hacer el ejercicio" y `id` 2.
+Añadir usando JavaScript una nueva tarea con título "Hacer el ejercicio" y `id` 2.
 
 ```javascript
 const lista = document.getElementById("lista");
@@ -165,7 +169,7 @@ lista.appendChild(element);
 
 ### Variación
 
-Hacer que el título proventa del input entrada:
+Hacer que el título provenga del `input` con identificador `entrada`:
 
 ```javascript
 const ent = document.getElementById("entrada");
@@ -175,12 +179,18 @@ ent.value = ""
 
 ## Ejercicio 4
 
+Enunciado:
 > ¿Por qué es importante tener un pool de conexiones?
+
+Respuesta:
 
 Crear conexiones es algo costoso, así que tener ya conexiones creadas entre el servidor y la BD aumenta la velocidad de respuesta.
 Además, por seguridad, no queremos que dos clientes tengan la misma conexión.
 
+Enunciado:
 > ¿Cómo lo implementarías?
+
+Respuesta:
 
 ```java
 class DBPool {
@@ -233,9 +243,9 @@ class Horarios {
 }
 ```
 
-Endpoints a implementar "/horarios"  y "/horarios?id={id}"
+Endpoints a implementar: "/horarios"  y "/horarios?id={id}"
 
-En Spring
+Implementación en Spring:
 
 ```java
 @Controller
@@ -262,7 +272,7 @@ class Controlador {
 }
 ```
 
-Sin spring:
+Implementación en JakartaEE:
 
 ```java
 public boolean doGet(req, resp) {
@@ -272,25 +282,27 @@ public boolean doGet(req, resp) {
   return "todos";
 }
 ```
+
 ## Ejercicio 6
-¿En que prioridad actua css?
+
+¿En que prioridad actúa CSS?
 De más importante a menos importante:
-1. !important (es una etiqueta que se le puede poner a los css)
-2. css inline, es decir css en el codigo de html
-3. el css de #id, es decir el del propio elemento.
-4. el css de .clase, es decir el de la clase a la que se le haya definido
-5. el css de tipo, es decir su tipo, como por ejemplo <ul>
-6. el css por defecto del motor de busqueda.
 
+1. `!important` (es una etiqueta que se le puede poner a los CSS).
+2. CSS inline, es decir CSS en el código de HTML.
+3. El CSS de `#id`, es decir el del propio elemento.
+4. El CSS de `.clase`, es decir el de la clase a la que se le haya definido.
+5. El CSS de tipo, es decir su tipo, como por ejemplo `<ul>`.
+6. El CSS por defecto del motor de búsqueda.
 
-# Qué puede preguntar:
+# Qué puede preguntar
 
-- Uno o varios controladores
-- Manipular html con javascript
-- Teoría: todo
-_ Un ejemplo de como implementar algo en Thymeleaf o un JSP.
-- Filtro
-- De teoria las diapositivas de arquitecturas que no hemos implementado como la hexagonal o la bola de barro no la va a preguntar.
-- De css lo único que puede preguntar ha dicho que es la prioridad de comportamiento.
-- Diferencias entre Model 0,1,2
-- Hacer el pool de conexiones e implementar uno o varios de sus metodos.
+- Uno o varios controladores.
+- Manipular HTML con JavaScript.
+- Teoría: todo.
+- Un ejemplo de como implementar algo en Thymeleaf o un JSP.
+- Filtro.
+- De teoría las diapositivas de arquitecturas que no hemos implementado como la hexagonal o la bola de barro no la va a preguntar.
+- De CSS lo único que puede preguntar ha dicho que es la prioridad de comportamiento.
+- Diferencias entre Model 0,1,2.
+- Hacer el pool de conexiones e implementar uno o varios de sus métodos.
