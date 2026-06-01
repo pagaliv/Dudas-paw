@@ -42,6 +42,7 @@ Haz el controlador y razona las decisiones.
 @RestController
 @RequestMapping("/api/usuarios")
 class UsuarioController {
+  @Autowired UserRepositry ur;
   @GetMapping // Obtener todos los usuarios
   ...
   @GetMapping("/{id}") // Obtener un usuario en concreto
@@ -58,11 +59,12 @@ class UsuarioController {
 El endpoint de creación con Spring:
 
 ```java
+@PostMapping
 public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, HttpSession session) {
   if(session.getAttribute("user") == null) {
     throw new NotAuthorizedException("...");
   }
-  UsuarioEntity nuevo = new UsuarioEntity();
+  UsuarioEntity guardado = new UsuarioEntity();
   nuevo.nombre = req.getParameter("nombre");
   ...
   usuarioRepository.save(nuevo);
