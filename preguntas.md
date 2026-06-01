@@ -159,14 +159,20 @@ Además, por seguridad, no queremos que dos clientes tengan la misma conexión.
 
 ```java
 class DBPool {
-  private DBConnection[20];
-
+  private Connection DBConnection[20];
+  private boolean ocupation[20];
+  public DBPool (){
+    for(int i=0; i<20 ; i++){
+      DBConnection[i]=DriverManager.getConnection(url,user,pwd);
+      ocupation[i]=false;
+    }
+  }
   public DBConnection getConnection() {
     int i = 0;
     while (true) {
       if (!occupation[i]) {
         ocupation[i] = true;
-        return array[i];
+        return DBConnection[i];
       }
       i = (i+1)%20;
     }
