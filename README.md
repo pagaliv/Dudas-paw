@@ -90,7 +90,7 @@ public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, Ht
 ```
 #### Endpoint mod entero
 ```java
-@PutMapping(\{id})
+@PutMapping(/{id})
 public UsuarioEntity update(@PathVariable id, RequestBody UsuarioEntity nuevosDatos, HttpSession s){
 if(s.getAtrribute("user")==null){throw new ExcepcionDeApp("No existe user")}else{
  UsuarioEntity user = ur.getById(id)
@@ -102,7 +102,31 @@ if(s.getAtrribute("user")==null){throw new ExcepcionDeApp("No existe user")}else
  }
 }
 ```
-
+#### Endpoint modificar partial
+```java
+@PatchMapping(/{id}}
+public UsuarioEntity updatepartial(@PathValue id, @RequestParam Map<String, Object> campos, HttpSession s){
+  if(s.getAtribute("user")==null){
+    throw new ExcepcionDeApp("user no encontrado");
+  }
+  UsuarioEntity user = ur.getyId(id)
+  if(user==null){
+   throw new ExceptiondeApp("usuario que se quiere editar no existe")
+  }
+  for(Map.Entry<String, Object> entry : campos.EntrySet()){
+    String key = entry.getKey();
+    Object value = entry.getValue();
+    swich(key){
+      case "nombre":
+           user.setNombre((String) value);
+           break;
+      [asi con todos]
+    }
+  }
+   return ur.save(user)
+  
+}
+```
 Hay que decir:
 
 > El framework (Spring) se encarga de leer de la _request_ la entidad del usuario `UsuarioEntity`.
