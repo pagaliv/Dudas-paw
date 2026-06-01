@@ -64,11 +64,9 @@ public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, Ht
   if(session.getAttribute("user") == null) {
     throw new NotAuthorizedException("...");
   }
-  UsuarioEntity guardado = new UsuarioEntity();
+  UsuarioEntity guardado = ur.save(nuevo);
+  return ResponseEntity.status(HttpStatus.CREATED).body(guardado)
   nuevo.nombre = req.getParameter("nombre");
-  ...
-  usuarioRepository.save(nuevo);
-  resp.write(Gson.serialize(nuevo));
 }
 ```
 
