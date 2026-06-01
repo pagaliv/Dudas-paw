@@ -31,21 +31,22 @@ Haz el controlador y razona las decisiones.
 
 ```java
 @RestController
+@RequestMapping("/api/usuarios")
 class UsuarioController {
-  @GetMapping("api/usuarios") // Obtener todos los usuarios
+  @GetMapping // Obtener todos los usuarios
   ...
-  @GetMapping("api/login/{id}") // Obtener un usuario en concreto
+  @GetMapping("/{id}") // Obtener un usuario en concreto
   ...
-  @PostMapping("api/usuarios/{id}") // Crear nuevos usuarios
+  @PostMapping // Crear nuevos usuarios
   ...
-  @PutMapping("api/usuarios/{id}") // Crear nuevos usuarios
+  @PutMapping("/{id}") mod user
   ...
-  @PatchMapping("api/usuarios/{id}") // Crear nuevos usuarios
+  @PatchMapping("{id}") // Crear nuevos usuarios
   ...
 }
 ```
 
-El endpoint de creación:
+El endpoint de creación con Spring:
 
 ```java
 public UsuarioEntity create(UsuarioEntity nuevo) {
