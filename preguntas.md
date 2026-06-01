@@ -233,7 +233,15 @@ public boolean doGet(req, resp) {
   return "todos";
 }
 ```
-
+## Ejercicio 6
+¿En que prioridad actua css?
+De más importante a menos importante:
+1. !important (es una etiqueta que se le puede poner a los css)
+2. css inline, es decir css en el codigo de html
+3. el css de #id, es decir el del propio elemento.
+4. el css de .clase, es decir el de la clase a la que se le haya definido
+5. el css de tipo, es decir su tipo, como por ejemplo <ul>
+6. el css por defecto del motor de busqueda.
 Qué puede preguntar:
 
 - Uno o varios controladores
@@ -242,3 +250,4 @@ Qué puede preguntar:
 _ Un ejemplo de como implementar algo en Thymeleaf o un JSP.
 - Filtro
 - De teoria las diapositivas de arquitecturas que no hemos implementado como la hexagonal o la bola de barro no la va a preguntar.
+- De css lo único que puede preguntar ha dicho que es la prioridad de comportamiento.
