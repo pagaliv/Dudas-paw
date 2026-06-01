@@ -176,6 +176,8 @@ class DBPool {
       }
       i = (i+1)%20;
     }
+    try{wait()}catch(Exception e){ e.printStacktrace();}
+    //no se debe encapsular en exception pero es un ejemplo generalista y ""pseudocodigo""
   }
 
   public void freeConnecion(DBConnection conn) {
