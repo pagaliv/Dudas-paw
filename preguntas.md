@@ -180,8 +180,14 @@ class DBPool {
     //no se debe encapsular en exception pero es un ejemplo generalista y ""pseudocodigo""
   }
 
-  public void freeConnecion(DBConnection conn) {
-    ...
+  public void freeConnecion(DBConnection con) {
+    for(int i=0; i < 20; i++){
+      if(DBConnection[i] == con){
+        ocupation[i] == false;
+        notifyAll(); //para avisar a quienes esten esperando para usar una conexión
+        break
+      }
+    }
   }
 }
 ```
