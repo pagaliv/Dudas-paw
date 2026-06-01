@@ -88,6 +88,19 @@ public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, Ht
   //HttpStatus.CREATED es una constante de Spring que representa el número 201
 }
 ```
+```java
+@PutMapping(\{id})
+public UsuarioEntity update(@PathVariable id, RequestBody UsuarioEntity nuevosDatos, HttpSession s){
+if(s.getAtrribute("user")==null){throw new ExcepcionDeApp("No existe user")}else{
+ UsuarioEntity user = ur.getById(id)
+ if(user==null){throw new ExcepcionDeApp("No existe user")}else{
+   user.setNombre(nuevosDatos.getNombre());
+   [así con todos los datos]
+   return ur.save(user)
+  }
+ }
+}
+```
 
 Hay que decir:
 
