@@ -127,6 +127,27 @@ public UsuarioEntity updatepartial(@PathValue id, @RequestParam Map<String, Obje
   
 }
 ```
+#### Eliminar (Se dice implicitamente que no debe estar, pero par tener un ejemplo de como se haría)
+```java
+@DeleteMapping("/{id}")
+public ResponseEntity<Void> delete(@PathVariable Long id, HttpSession session) {
+    // 1. Verificar login
+    verificarLogin(session);
+    
+    // 2. Buscar el usuario de forma tradicional
+    Optional<UsuarioEntity> optional = usuarioRepository.findById(id);
+    if (!optional.isPresent()) {
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado");
+    }
+    
+    // 3. Eliminar (no necesitamos siquiera obtener el objeto, pero podemos hacerlo)
+    // UsuarioEntity usuario = optional.get(); // si se necesitara para algo
+    usuarioRepository.deleteById(id);
+    
+    // 4. Devolver 204 No Content (sin cuerpo)
+    return ResponseEntity.noContent().build();
+}
+```
 Hay que decir:
 
 > El framework (Spring) se encarga de leer de la _request_ la entidad del usuario `UsuarioEntity`.
