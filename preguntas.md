@@ -240,3 +240,5 @@ Qué puede preguntar:
 - Manipular html con javascript
 - Teoría: todo
 _ Un ejemplo de como implementar algo en Thymeleaf o un JSP.
+- Filtro
+- De teoria las diapositivas de arquitecturas que no hemos implementado como la hexagonal o la bola de barro no la va a preguntar.
