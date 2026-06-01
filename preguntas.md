@@ -65,8 +65,8 @@ public ResponseEntity<UsuarioEntity> create(@RequestBody UsuarioEntity nuevo, Ht
     throw new NotAuthorizedException("...");
   }
   UsuarioEntity guardado = ur.save(nuevo);
-  return ResponseEntity.status(HttpStatus.CREATED).body(guardado)
-  nuevo.nombre = req.getParameter("nombre");
+  return ResponseEntity.status(HttpStatus.CREATED).body(guardado);
+  //HttpStatus.CREATED es una constante de Spring que representa el número 201
 }
 ```
 
