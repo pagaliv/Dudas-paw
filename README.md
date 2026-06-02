@@ -385,6 +385,25 @@ Dado el siguiente html:
 3. Elimina del `<ul id="Lista">` el único elemento `<li>` que contiene (el que dice "Nombre aquí").
 4. Configura la lista (`<ul>`) para que contenga un elemento `<li>` por cada nombre del array definido anteriormente.
 5. Habilita todos los botones que estén deshabilitados (cambia su propiedad `disabled` a `false`).
+
+```javascript
+ let nombreLista = document.getElementsbyTagName("h1")[0];
+ nombreLista.innerText = "Lista de nombres";
+ const nombres = ["Ana", "Juan", "María", "Pedro"];
+ let lista = document.getElementbyId("lista");
+ let elementoLista = lista.getElementsByTagName("li")[0];
+ lista.remobeChild(elementoLista);
+ for(let i = 0; 0 < nombre.legth ; i ++){
+   let elemento = document.createElement("il");
+   elemento.innerText = nombre[i];
+   lista.appendChild(elemento);
+ }
+for ( let i = 0; i < 4 ; i++){
+  document.getElementsByTagName[i].disabled=false;
+}
+```
+
+
 # Qué puede preguntar
 
 - Uno o varios controladores.
