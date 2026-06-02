@@ -403,6 +403,37 @@ for ( let i = 0; i < 4 ; i++){
 }
 ```
 
+## Ejercicio extra DOM
+Dado el siguiente html:
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio DOM - Lista de tareas</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        .completada { text-decoration: line-through; color: gray; }
+        button { margin: 0.2rem; }
+    </style>
+</head>
+<body>
+    <h2>Mis tareas</h2>
+    <ul id="listaTareas">
+        <li>Tarea de ejemplo</li>
+    </ul>
+    <button id="btnAgregar" disabled>Agregar nueva tarea</button>
+    <button id="btnMarcar">Marcar primera como completada</button>
+    <button id="btnEliminar" disabled>Eliminar última tarea</button>
+    <button id="btnReset">Reiniciar lista</button>
+
+    <script>
+        // Aquí irá tu código JavaScript
+    </script>
+</body>
+</html>
+```
+
 
 # Qué puede preguntar
 
