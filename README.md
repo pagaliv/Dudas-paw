@@ -354,6 +354,31 @@ De más importante a menos importante:
 5. El CSS de tipo, es decir su tipo, como por ejemplo `<ul>`.
 6. El CSS por defecto del motor de búsqueda.
 
+# Ejercicios Extra
+## Ejercicio diapositivas DOM
+Dado el siguiente html:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>lista</h1>
+    <ul id="Lista">
+        <li>Nombre aquí</li>
+    </ul>
+    <button disabled onclick="alert('Botón 1')">Botón 1</button>
+    <button onclick="alert('Botón 2')">Botón 2</button>
+    <button disabled onclick="alert('Botón 3')">Botón 3</button>
+    <button disabled onclick="alert('Botón 4')">Botón 4</button>
+    <script>
+        // Aquí irá tu código JavaScript
+    </script>
+</body>
+</html>
+```
 # Qué puede preguntar
 
 - Uno o varios controladores.
