@@ -434,6 +434,22 @@ Dado el siguiente html:
 </html>
 ```
 
+1. **Cambiar el título** del `<h2>` a **“Lista de tareas pendientes”**.
+2. **Crear un array** con al menos 3 tareas iniciales (por ejemplo, `["Estudiar JavaScript", "Hacer ejercicio", "Leer un libro"]`).
+3. **Vaciar la lista** `<ul id="listaTareas">` eliminando el `<li>` de ejemplo que contiene (“Tarea de ejemplo”).
+4. **Rellenar la lista** añadiendo un `<li>` por cada tarea del array creado en el paso 2.
+5. **Habilitar** el botón con `id="btnAgregar"` y el botón con `id="btnEliminar"` (cambiar `disabled` a `false`).
+6. **Añadir funcionalidad** (escribe el código que responda a los clics):
+   - Al hacer clic en **“Agregar nueva tarea”**, se debe mostrar un `prompt()` pidiendo una nueva tarea y, si el usuario escribe algo, añadir esa tarea como un nuevo `<li>` al final de la lista.
+   - Al hacer clic en **“Marcar primera como completada”**, se debe añadir la clase CSS `"completada"` al primer `<li>` de la lista (si existe). Si ya tiene la clase, no pasa nada.
+   - Al hacer clic en **“Eliminar última tarea”**, se debe eliminar el último `<li>` de la lista (si hay al menos uno).
+   - Al hacer clic en **“Reiniciar lista”**, se debe restaurar la lista a exactamente el mismo estado que dejaste en los pasos 3 y 4 (es decir, vaciar y volver a poner las tareas del array original, sin tareas adicionales que se hayan agregado después).
+  
+
+```javascript
+
+
+```
 
 # Qué puede preguntar
 
