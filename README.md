@@ -163,7 +163,7 @@ public create(HttpRequest req, HttpResponse resp) {
   nuevo.nombre = req.getParameter("nombre");
   ...
   usuarioRepository.save(nuevo);
-  resp.write(Gson.serialize(nuevo));
+  resp.getWriter().write(gson.toJson(nuevo));
 }
 ```
 
