@@ -394,12 +394,12 @@ Dado el siguiente html:
  let elementoLista = lista.getElementsByTagName("li")[0];
  lista.remobeChild(elementoLista);
  for(let i = 0; 0 < nombre.legth ; i ++){
-   let elemento = document.createElement("il");
+   let elemento = document.createElement("li");
    elemento.innerText = nombre[i];
    lista.appendChild(elemento);
  }
 for ( let i = 0; i < 4 ; i++){
-  document.getElementsByTagName[i].disabled=false;
+  document.getElementsByTagName("button")[i].disabled=false;
 }
 ```
 
