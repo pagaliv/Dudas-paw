@@ -379,6 +379,12 @@ Dado el siguiente html:
 </body>
 </html>
 ```
+
+1. Cambia el contenido del elemento `<h1>` a **“Lista de nombres”**.
+2. Crea un array de nombres de personas (por ejemplo, `["Ana", "Juan", "María", "Pedro"]`).
+3. Elimina del `<ul id="Lista">` el único elemento `<li>` que contiene (el que dice "Nombre aquí").
+4. Configura la lista (`<ul>`) para que contenga un elemento `<li>` por cada nombre del array definido anteriormente.
+5. Habilita todos los botones que estén deshabilitados (cambia su propiedad `disabled` a `false`).
 # Qué puede preguntar
 
 - Uno o varios controladores.
