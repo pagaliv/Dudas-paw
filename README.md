@@ -105,7 +105,7 @@ if(s.getAtrribute("user")==null){throw new ExcepcionDeApp("No existe user")}else
 #### Endpoint modificar partial
 ```java
 @PatchMapping(/{id}}
-public UsuarioEntity updatepartial(@PathValue id, @RequestParam Map<String, Object> campos, HttpSession s){
+public UsuarioEntity updatepartial(@PathValue id, @RequestBody Map<String, Object> campos, HttpSession s){
   if(s.getAtribute("user")==null){
     throw new ExcepcionDeApp("user no encontrado");
   }
