@@ -604,3 +604,10 @@ Es el archivo que contiene la internacionalización de la web, precisamente tien
   tipos que dan false al ser evaludados. 
 - ¿Qué necesita un formulario para soportar el envío de ficheros?
   El metodo debe ser post y el enttype="multipart\form-data"
+ejemplo:
+```html
+<form action="/subir" method="POST" enctype="multipart/form-data">
+    <input type="file" name="archivo">
+    <button type="submit">Subir</button>
+</form>
+```
