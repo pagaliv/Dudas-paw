@@ -643,6 +643,7 @@ b) Midiendo el tiempo dentro del servlet.
 c) Usando `System.nanoTime()` solo antes de `chain.doFilter()`.  
 d) No se calcula tiempo, solo se registra la URL.  
 
+
 **13.** ¿Cuál es el propósito del patrón Wrapper (o Decorator) en el contexto de filtros?  
 a) Permitir que un filtro pueda actuar como servlet.  
 b) Envolver la petición o respuesta para modificar su comportamiento sin cambiar el objeto original.  
