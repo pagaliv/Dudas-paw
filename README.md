@@ -594,11 +594,8 @@ Responde las siguientes preguntas según la información del material "Cookies.p
 
 - Función de JavaScript para evitar el comportamiento por defecto de eventos
  ```javascript
-  
+  evento.preventDefault();
  ```  
-
-- Dominio de una Cookie  
-
 - ¿Qué es el locale?  
 
 - ¿Qué es el bundle?  
