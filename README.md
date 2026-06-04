@@ -662,6 +662,10 @@ c) En un archivo de propiedades.
 d) En una base de datos.  
 
 ---
+### Respuestas 
+1. c    2. c    3. b    4. b    5. c
+6. a    7. a    8. b    9. c   10. c
+11. b   12. a   13. b   14. b   15. b
 
 ## Ejercicios prácticos de manipulación de filtros
 
