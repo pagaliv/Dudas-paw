@@ -577,10 +577,13 @@ Responde las siguientes preguntas según la información del material "Cookies.p
 
 - En una petición GET ¿qué cabeceras usamos para?  
   - Determinar la codificación de caracteres  : La cabecera que lo contiene seguro es Accept-Charset, pero si no te acuerdas puedes jugar la de poner el Content-Type y que este contenga Charset.
-  - Saber qué tipo de cliente usa el usuario  
-  - Especificar un idioma  
+  - Saber qué tipo de cliente usa el usuario  : User-Agent
+  - Especificar un idioma  : Content-Language
 
-- Enviar una cookie de nombre `skin` cuyo valor sea `clásico` y que dure hasta dentro de dos años  
+- Enviar una cookie de nombre `skin` cuyo valor sea `clásico` y que dure hasta dentro de dos años
+  ```http
+  Set-Cookie: skin=clásico; Max-Age=63072000; Path=/
+  ```
 
 - Especificar el dominio  
 
