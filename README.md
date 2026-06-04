@@ -392,7 +392,7 @@ Dado el siguiente html:
  const nombres = ["Ana", "Juan", "María", "Pedro"];
  let lista = document.getElementbyId("lista");
  let elementoLista = lista.getElementsByTagName("li")[0];
- lista.remobeChild(elementoLista);
+ lista.removeChild(elementoLista);
  for(let i = 0; 0 < nombre.legth ; i ++){
    let elemento = document.createElement("li");
    elemento.innerText = nombre[i];
@@ -447,12 +447,36 @@ Dado el siguiente html:
   
 
 ```javascript
+let hdos = document.getElementsByTagName("h2")[0]
+hdos.innerText = "Lista de tareas pendientes"
+const tarea = ["peo", "caca", "pis" ]
+let  lista = document.getElementById("listaTareas")
+let elementoListaToMatar = lista.getElementsByTagName("li")[0]
+lista.removeChild(elementoListaToMatar)
+for(int i; i<tarea.lenght; i++){
+ let elementoNuevo = document.newElement("li")
+ elementoNuevo.innerText = tarea[i]
+ lista.appendChild(elementoNuevo)
+}
+let btnagr = document.getElementById("btnAgregar")
+let btneli = document.getElementById("btnEliminar")
+btnagr.disabled =false
+btneli.desabled= false 
+btnagr.addEventListener("click", addTarea())
 
+addTarea(){
+  const tarea = promt("introduce tarea")
+  if(tarea && tarea.trim()!=""){
+    let nuevoelemento = document.newElement("li")
+    li.innerText = tarea;
+    lista.appendChild(nuevoelemento)
+  }
+}
+// el resto de cosas es hacer todo el rato lo mismo 
 
 ```
 
 # Qué puede preguntar
-
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
 - Teoría: todo.
@@ -462,3 +486,27 @@ Dado el siguiente html:
 - De CSS lo único que puede preguntar ha dicho que es la prioridad de comportamiento.
 - Diferencias entre Model 0,1,2.
 - Hacer el pool de conexiones e implementar uno o varios de sus métodos.
+
+## Preguntas de otros años con respuestas 
+
+
+- En una petición GET ¿qué cabeceras usamos para?  
+  - Determinar la codificación de caracteres  
+  - Saber qué tipo de cliente usa el usuario  
+  - Especificar un idioma  
+
+- Enviar una cookie de nombre `skin` cuyo valor sea `clásico` y que dure hasta dentro de dos años  
+
+- Especificar el dominio  
+
+- Función de JavaScript para evitar el comportamiento por defecto de eventos  
+
+- Dominio de una Cookie  
+
+- ¿Qué es el locale?  
+
+- ¿Qué es el bundle?  
+
+- Tipos falsy  
+
+- ¿Qué necesita un formulario para soportar el envío de ficheros?
