@@ -334,11 +334,17 @@ class Controlador {
 Implementación en JakartaEE:
 
 ```java
-public boolean doGet(req, resp) {
+public String doGet(req, resp) {
   String id = req.getParameter("id");
-  List<Horario> hrs = horarioRepository.findAll();
-  response.setAttribute("hrs", hrs);
-  return "todos";
+  if( id == null ) {//no hay id, se mandan todos los horarios
+     List<Horario> hrs = horarioRepository.findAll();
+     response.setAttribute("hrs", hrs);
+     return "todos";
+  }else{ //si hay id
+    Horario hr = horarioRepoitory.finbyId(id);
+    response.setAttribute("hr", hr);
+    return "horarioInfo" //el nombre que quieras realmente
+  }
 }
 ```
 
