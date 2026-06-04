@@ -562,6 +562,129 @@ Responde las siguientes preguntas según la información del material "Cookies.p
 9. b  
 10. c
 
+## test de filtros
+# Batería de preguntas tipo test sobre Filtros en Jakarta EE
+
+Basado en el documento *Filtros* (Departamento de Matemáticas y Computación, Grado en Ingeniería Informática, Programación de Aplicaciones Web).
+
+---
+
+## Preguntas de opción múltiple
+
+**1.** ¿Cuál es el método principal que debe implementar un filtro en Jakarta EE?  
+a) `service(ServletRequest req, ServletResponse res)`  
+b) `execute(ServletRequest req, ServletResponse res, FilterChain chain)`  
+c) `doFilter(ServletRequest req, ServletResponse res, FilterChain chain)`  
+d) `run(ServletRequest req, ServletResponse res, FilterChain chain)`  
+
+**2.** Según el PDF, ¿cuál de las siguientes afirmaciones sobre los filtros es **FALSA**?  
+a) Un filtro puede actuar sobre cualquier recurso devuelto por el contenedor (HTML, CSS, etc.).  
+b) Los filtros pueden modificar tanto la petición como la respuesta.  
+c) Los filtros siempre deben llamar a `chain.doFilter()` para que la petición continúe.  
+d) Un filtro puede bloquear la petición sin invocar `chain.doFilter()` y devolver él mismo la respuesta.  
+
+**3.** ¿Cómo se determina el orden de ejecución de varios filtros que coinciden con una misma URL?  
+a) Por orden alfabético del nombre del filtro.  
+b) Por el orden en que aparecen en el archivo `web.xml` o, si usan anotaciones, de forma indeterminada.  
+c) Por la prioridad numérica indicada en `@WebFilter(priority=...)`.  
+d) Por la longitud del patrón de URL (el más específico primero).  
+
+**4.** En la cadena de filtros, ¿cómo viaja la respuesta?  
+a) En el mismo orden que la petición (primero el último filtro, luego el primero).  
+b) En orden inverso al de la petición.  
+c) Solo pasa por el filtro que generó la respuesta.  
+d) No pasa por los filtros, solo por el servlet.  
+
+**5.** ¿Qué etiqueta de `web.xml` se utiliza para indicar sobre qué URLs actúa un filtro?  
+a) `<filter-class>`  
+b) `<url-mapping>`  
+c) `<filter-mapping>` con `<url-pattern>`  
+d) `<dispatcher>`  
+
+**6.** ¿Qué elemento de `web.xml` permite especificar si un filtro debe ejecutarse en un `forward`, `include` o `error` además del `REQUEST`?  
+a) `<dispatcher>`  
+b) `<dispatch-type>`  
+c) `<filter-dispatch>`  
+d) `<url-pattern>`  
+
+**7.** Para poder modificar el contenido de la respuesta (por ejemplo, comprimir el HTML), es necesario:  
+a) Usar un `HttpServletResponseWrapper` y envolver la respuesta original antes de llamar a `chain.doFilter()`.  
+b) Modificar directamente el `HttpServletResponse` dentro del `doFilter` después de `chain.doFilter()`.  
+c) Usar la anotación `@CompressResponse`.  
+d) No es posible modificar la respuesta una vez generada por el servlet.  
+
+**8.** En el ejemplo de autenticación del PDF, ¿qué guarda el filtro en la sesión antes de redirigir al login?  
+a) El nombre de usuario introducido.  
+b) La URL a la que se quería acceder (`returnURL`).  
+c) La contraseña cifrada.  
+d) El objeto `Cliente` vacío.  
+
+**9.** ¿Qué cabecera HTTP utiliza el navegador para indicar que acepta contenido comprimido?  
+a) `Content-Encoding: gzip`  
+b) `Transfer-Encoding: chunked`  
+c) `Accept-Encoding: gzip, deflate`  
+d) `Accept-Compression: true`  
+
+**10.** ¿Cuál de las siguientes **NO** es una responsabilidad típica de un filtro según el PDF?  
+a) Auditoría de uso de la aplicación.  
+b) Transformación de la respuesta (compresión, encriptado).  
+c) Gestión de conexiones a bases de datos.  
+d) Controles de seguridad (autenticación).  
+
+**11.** ¿Qué método se invoca cuando el contenedor destruye el filtro (por ejemplo, al detener la aplicación)?  
+a) `finalize()`  
+b) `destroy()`  
+c) `close()`  
+d) `dispose()`  
+
+**12.** En el filtro de ejemplo `TiempoRespuesta`, ¿cómo se calcula el tiempo de respuesta?  
+a) Midiendo el tiempo antes y después de `chain.doFilter()`.  
+b) Midiendo el tiempo dentro del servlet.  
+c) Usando `System.nanoTime()` solo antes de `chain.doFilter()`.  
+d) No se calcula tiempo, solo se registra la URL.  
+
+**13.** ¿Cuál es el propósito del patrón Wrapper (o Decorator) en el contexto de filtros?  
+a) Permitir que un filtro pueda actuar como servlet.  
+b) Envolver la petición o respuesta para modificar su comportamiento sin cambiar el objeto original.  
+c) Mejorar el rendimiento de la cadena de filtros.  
+d) Evitar la herencia múltiple en Java.  
+
+**14.** ¿Qué anotación se utiliza a partir de Servlet 3.0 para declarar un filtro sin usar `web.xml`?  
+a) `@Filter`  
+b) `@WebFilter`  
+c) `@ServletFilter`  
+d) `@FilterMapping`  
+
+**15.** En el filtro de ejemplo `RequestCounterFilter` del PDF, ¿dónde se almacena el mapa de contadores por URL?  
+a) En la sesión del usuario.  
+b) En un atributo de `ServletContext`.  
+c) En un archivo de propiedades.  
+d) En una base de datos.  
+
+---
+
+## Ejercicios prácticos de manipulación de filtros
+
+### Ejercicio 1: Mejora del filtro de autenticación con control de roles
+
+**Contexto:**  
+El siguiente filtro básico solo comprueba si existe un usuario en sesión. Si no existe, redirige al login.
+
+```java
+public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+        throws IOException, ServletException {
+    HttpServletRequest req = (HttpServletRequest) request;
+    HttpServletResponse resp = (HttpServletResponse) response;
+    HttpSession session = req.getSession();
+    User user = (User) session.getAttribute("user");
+    if (user == null) {
+        resp.sendRedirect(req.getContextPath() + "/login");
+    } else {
+        chain.doFilter(request, response);
+    }
+}
+
+
 # Qué puede preguntar
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
