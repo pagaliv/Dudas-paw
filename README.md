@@ -690,7 +690,9 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
     }
 }
 ```
-
+Supongamos que solo los usuarios con el rol "admin" pueden entrar 
+```java
+```
 # Qué puede preguntar
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
