@@ -713,6 +713,39 @@ public void doFilter(HttpRequest req, HttpResponse res, FilterChain chain){
   }
 } 
 ```
+---
+## Fetch 
+### Ejemplo de fetch con promesas
+```javascript
+// Función que obtiene un post por su ID
+function obtenerPost(id) {
+  const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+
+  fetch(url)
+    .then(response => {
+      // fetch NO rechaza la promesa por errores HTTP (404, 500, etc.)
+      // Por eso debemos comprobar response.ok
+      if (!response.ok) {
+        // Lanzamos un error personalizado con el código y texto de estado
+        throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
+      }
+      // Si la respuesta es correcta, la convertimos a JSON (devuelve otra promesa)
+      return response.json();
+    })
+    .then(data => {
+      // Aquí ya tenemos el objeto JavaScript resultante
+      console.log('Post recibido:', data);
+      return data;
+    })
+    .catch(error => {
+      // Capturamos cualquier error: problemas de red, errores HTTP lanzados, etc.
+      console.error('Falló la petición:', error.message);
+    });
+}
+
+// Uso
+obtenerPost(1);
+```
 # Qué puede preguntar
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
