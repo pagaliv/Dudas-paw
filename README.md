@@ -18,8 +18,10 @@ doFilter() {
   user = session.getAttribute("user");
   if (user == null) {
       redirect("login");
+  }else{
+    doChain(request,resp);
   }
-  doChain(request,resp);
+  
 }
 ```
 
