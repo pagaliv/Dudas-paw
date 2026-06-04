@@ -597,7 +597,7 @@ Responde las siguientes preguntas según la información del material "Cookies.p
   evento.preventDefault();
  ```  
 - ¿Qué es el locale?  
-
+Son las caracteristicas propias de un lugar, como el idioma, el formato de la fecha o de hora
 - ¿Qué es el bundle?  
 
 - Tipos falsy  
