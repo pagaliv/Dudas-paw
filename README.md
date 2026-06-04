@@ -585,9 +585,17 @@ Responde las siguientes preguntas según la información del material "Cookies.p
   Set-Cookie: skin=clásico; Max-Age=63072000; Path=/
   ```
 
-- Especificar el dominio  
+- Especificar el dominio  (entiendo que el de la cokie)
+ Se añade el atributo `Domain` en la cabecera Set-Cookie
+  ```http
+   Set-Cookie : Domain = [el-dominio]
+  ```
+  Si no se especifica envia el host del que lo ha creado
 
-- Función de JavaScript para evitar el comportamiento por defecto de eventos  
+- Función de JavaScript para evitar el comportamiento por defecto de eventos
+ ```javascript
+  
+ ```  
 
 - Dominio de una Cookie  
 
