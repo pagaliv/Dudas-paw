@@ -693,14 +693,26 @@ public void doFilter(ServletRequest request, ServletResponse response, FilterCha
 Supongamos que solo los usuarios con el rol "admin" pueden entrar 
 se puede hacer de dos formas, la primera, tratando el rol como un atributo del user:
 ```java
-public void doFilter(HttpRequest req, HttpResponse res){
+public void doFilter(HttpRequest req, HttpResponse res, FilterChain chain){
   httpSesion s = req.getSession(false);
   if(s == null || s.getAttribute("user") == null || s.getAttribute("user").roll != "admin"){
     resp.sendRedirect(req.getContextPath() + "/login");
+  }else{
+   chain.doFilter(request, response);
   }
-}
+} 
 ```
-
+la segunda es tratarlo como un atributo de sesion 
+```java
+public void doFilter(HttpRequest req, HttpResponse res, FilterChain chain){
+  httpSesion s = req.getSession(false);
+  if(s == null || s.getAttribute("user") == null || s.getAttribute("rolUser") != "admin"){
+    resp.sendRedirect(req.getContextPath() + "/login");
+  }else{
+   chain.doFilter(request, response);
+  }
+} 
+```
 # Qué puede preguntar
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
