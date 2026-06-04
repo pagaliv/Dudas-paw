@@ -597,9 +597,10 @@ Responde las siguientes preguntas según la información del material "Cookies.p
   evento.preventDefault();
  ```  
 - ¿Qué es el locale?  
-Son las caracteristicas propias de un lugar, como el idioma, el formato de la fecha o de hora
+Son las caracteristicas propias de un lugar, como el idioma, el formato de la fecha o de hora.
 - ¿Qué es el bundle?  
-
+Es el archivo que contiene la internacionalización de la web, precisamente tiene los localismo de locale.
 - Tipos falsy  
-
+  tipos que dan false al ser evaludados. 
 - ¿Qué necesita un formulario para soportar el envío de ficheros?
+  El metodo debe ser post y el enttype="multipart\form-data"
