@@ -21,7 +21,6 @@ doFilter() {
   }else{
     doChain(request,resp);
   }
-  
 }
 ```
 
