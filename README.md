@@ -746,6 +746,32 @@ function obtenerPost(id) {
 // Uso
 obtenerPost(1);
 ```
+### Ejemplo con async y await
+```javascript
+async function obtenerPost(id) {
+  const url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+
+  try {
+    const response = await fetch(url);
+
+    // Comprobamos si la respuesta es exitosa (código 200-299)
+    if (!response.ok) {
+      throw new Error(`Error HTTP: ${response.status} - ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    console.log('Post recibido:', data);
+    return data;
+  } catch (error) {
+    console.error('Falló la petición:', error.message);
+    // Podemos relanzar el error si queremos que la función lo propague
+    throw error;
+  }
+}
+
+// Uso
+obtenerPost(2);
+```
 # Qué puede preguntar
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
