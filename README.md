@@ -656,6 +656,7 @@ b) `@WebFilter`
 c) `@ServletFilter`  
 d) `@FilterMapping`  
 
+
 **15.** En el filtro de ejemplo `RequestCounterFilter` del PDF, ¿dónde se almacena el mapa de contadores por URL?  
 a) En la sesión del usuario.  
 b) En un atributo de `ServletContext`.  
