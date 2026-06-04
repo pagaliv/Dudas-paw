@@ -476,6 +476,85 @@ addTarea(){
 
 ```
 
+## Test sobre Cookies 
+
+Responde las siguientes preguntas según la información del material "Cookies.pdf".
+
+1. **¿Qué son las cookies según la introducción del material?**  
+   a) Programas ejecutables que pueden ser virus.  
+   b) Datos binarios almacenados en el servidor.  
+   c) Datos de texto definidos por el servidor y enviados al navegador.  
+   d) Cabeceras HTTP obligatorias en toda petición.
+
+2. **¿Qué ocurre con una cookie que no tiene los atributos `Expires` ni `Max-Age`?**  
+   a) Se convierte en una cookie persistente.  
+   b) Se elimina inmediatamente después de ser recibida.  
+   c) Se elimina cuando el navegador se cierra (cookie de sesión).  
+   d) Se almacena indefinidamente en el cliente.
+
+3. **¿Cuál es el tamaño máximo aproximado por cookie según el material?**  
+   a) 1 KB  
+   b) 4 KB  
+   c) 8 KB  
+   d) 16 KB
+
+4. **¿Qué atributo de una cookie impide que sea accesible desde JavaScript en el navegador?**  
+   a) `Secure`  
+   b) `HttpOnly`  
+   c) `Domain`  
+   d) `Path`
+
+5. **¿Qué cabecera HTTP utiliza el navegador para devolver las cookies al servidor?**  
+   a) `Set-Cookie`  
+   b) `Cookie`  
+   c) `Cache-Control`  
+   d) `Set-Cookie2`
+
+6. **Las cookies de terceros (third-party cookies) se caracterizan por:**  
+   a) Tener el mismo dominio que la página que las establece.  
+   b) Ser establecidas únicamente por el servidor principal.  
+   c) Tener un dominio diferente al de la página a través de la cual se reciben.  
+   d) No poder ser leídas nunca por el servidor.
+
+7. **Según la Guía de la AEPD actualizada a enero de 2024, el usuario debe poder:**  
+   a) Retirar el consentimiento en cualquier momento.  
+   b) Impedir siempre el acceso al sitio web si no acepta cookies.  
+   c) No tener alternativa al servicio si rechaza las cookies.  
+   d) Recibir cookies sin información previa.
+
+8. **¿Qué método de `HttpServletResponse` se usa para enviar una cookie al navegador en JakartaEE?**  
+   a) `setCookie(Cookie)`  
+   b) `sendCookie(Cookie)`  
+   c) `addCookie(Cookie)`  
+   d) `putCookie(Cookie)`
+
+9. **Si una cookie tiene el atributo `Max-Age=0`, ¿qué significa?**  
+   a) La cookie es de sesión.  
+   b) La cookie se elimina inmediatamente.  
+   c) La cookie nunca expira.  
+   d) La cookie dura 0 segundos después de cerrar el navegador.
+
+10. **En Expression Language (EL) de JSP, ¿cómo se accede al valor de una cookie llamada “miCookie”?**  
+    a) `${cookie.miCookie}`  
+    b) `${cookies.miCookie.value}`  
+    c) `${cookie.miCookie.value}`  
+    d) `${request.cookie['miCookie']}`
+
+---
+
+## Respuestas correctas
+
+1. c  
+2. c  
+3. b  
+4. b  
+5. b  
+6. c  
+7. a  
+8. c  
+9. b  
+10. c
+
 # Qué puede preguntar
 - Uno o varios controladores.
 - Manipular HTML con JavaScript.
