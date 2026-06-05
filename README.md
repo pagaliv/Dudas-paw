@@ -783,6 +783,61 @@ obtenerPost(2);
 - Diferencias entre Model 0,1,2.
 - Hacer el pool de conexiones e implementar uno o varios de sus métodos.
 
+# Ejercicio: Mostrar usuarios y sus posts en el DOM con `fetch`
+
+**Objetivo:** Practicar el uso de `fetch` para obtener datos de una API y modificar dinámicamente el DOM (Document Object Model) de una página HTML.
+
+**API a utilizar:**  
+[https://jsonplaceholder.typicode.com/](https://jsonplaceholder.typicode.com/)  
+- Endpoint de usuarios: `https://jsonplaceholder.typicode.com/users`  
+- Endpoint de posts de un usuario: `https://jsonplaceholder.typicode.com/posts?userId={id}`
+
+---
+
+## Enunciado
+
+Crea una página HTML que contenga:
+
+1. Un elemento `<select>` (lista desplegable) que se llene automáticamente con los nombres de los usuarios obtenidos desde la API.  
+2. Un botón con el texto **"Ver posts"**.  
+3. Un `<div>` vacío con id `"posts-container"` donde se mostrarán los posts del usuario seleccionado.
+
+### Requisitos funcionales
+
+- Al cargar la página, se debe realizar una petición `fetch` a `https://jsonplaceholder.typicode.com/users`.  
+- Con los datos recibidos, rellena el `<select>` con una opción por cada usuario. El valor de cada opción debe ser el `id` del usuario y el texto visible su `name`.  
+- Cuando el usuario seleccione un nombre y haga clic en el botón **"Ver posts"**, se debe hacer otra petición `fetch` a la URL que obtiene los posts de ese usuario (usa el `userId`).  
+- Una vez recibidos los posts, debes **modificar el DOM** del `div` `#posts-container` para mostrar una lista `<ul>` con los títulos de todos los posts del usuario.  
+- Si el usuario no tiene ningún post, muestra un mensaje dentro del mismo `div` diciendo: *"Este usuario aún no ha escrito posts"*.  
+- Maneja posibles errores de red o de la API mostrando un mensaje de error en el `div` (en lugar de la lista de posts).
+
+### Plus (opcional)
+Mientras se cargan los posts, muestra un texto "Cargando..." dentro del `div` para dar feedback al usuario.
+
+---
+
+## Estructura HTML mínima sugerida
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio fetch + DOM</title>
+</head>
+<body>
+  <h1>Posts por usuario</h1>
+  <label for="usuario">Elige un usuario:</label>
+  <select id="usuario"></select>
+  <button id="verPosts">Ver posts</button>
+  <div id="posts-container">
+    <!-- Aquí se mostrarán los posts -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
 ## Preguntas de otros años con respuestas 
 
 
