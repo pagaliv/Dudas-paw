@@ -49,3 +49,49 @@
    <div class="container" id="mio">
      <img src="adios.png">
    </div>
+   ´´´
+a) document.querySelector("#mio img").src = "perro.png";
+b) document.getElementById("mio").children[0].src = "perro.png";
+c) document.getElementsByTagName("img")[1].src = "perro.png";
+d) Todas las anteriores son correctas.
+
+7. ¿Cuál de las siguientes afirmaciones sobre los filtros es FALSA?
+a) Un filtro puede modificar la petición y la respuesta.
+b) Un filtro está obligado a llamar a chain.doFilter() para que la petición continúe.
+c) Es posible envolver la respuesta con HttpServletResponseWrapper para modificar su contenido.
+d) La anotación @WebFilter permite declarar un filtro sin web.xml.
+
+8. En el modelo arquitectónico Model 2 (MVC) para aplicaciones web, ¿qué componente recibe primero la petición?
+a) El modelo (Model)
+b) La vista (View)
+c) El controlador (Controller)
+d) La base de datos
+
+9. ¿Qué método de HttpServletResponse se usa para añadir una cookie en Jakarta EE?
+a) setCookie(Cookie c)
+b) sendCookie(Cookie c)
+c) addCookie(Cookie c)
+d) putCookie(Cookie c)
+
+10. Dado el siguiente fragmento de código Thymeleaf, ¿qué muestra en el HTML?
+
+html
+<p th:text="${usuario.nombre}">Nombre por defecto</p>
+a) "Nombre por defecto" siempre.
+b) El valor de la variable usuario.nombre si existe, o "Nombre por defecto" en caso contrario.
+c) El texto literal ${usuario.nombre}.
+d) Una excepción porque falta el atributo th:value.
+
+---
+## Parte 2 - Preguntas Cortas
+**11. Explica la diferencia entre el Model 0 (Modelo basado en páginas) y el Model 2 (MVC). Nombra una ventaja del Model 2 sobre el Model 0.**
+
+**12. ¿Por qué es importante usar un pool de conexiones en una aplicación web que accede a una base de datos? Describe brevemente cómo implementarías uno en Java (pseudocódigo válido).**
+
+**13. En JavaScript, escribe una función que reciba un array de nombres y los muestre como una lista `<ul>` dentro de un elemento con id "contenedor". Si el array está vacío, debe mostrar un párrafo con el texto "No hay elementos".**
+
+**14- Enumera, de mayor a menor prioridad, los tipos de selectores CSS que intervienen en la cascada (incluye !important, inline, id, clase, tipo y estilo por defecto del navegador).**
+
+---
+
+
