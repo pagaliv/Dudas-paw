@@ -58,32 +58,32 @@
    d) `Todas las anteriores son correctas.`  
 
 7. **¿Cuál de las siguientes afirmaciones sobre los filtros es FALSA?**
-   a) `Un filtro puede modificar la petición y la respuesta.`
-   b) `Un filtro está obligado a llamar a chain.doFilter() para que la petición continúe.`
-   c) `Es posible envolver la respuesta con HttpServletResponseWrapper para modificar su contenido.`
-   d) `La anotación @WebFilter permite declarar un filtro sin web.xml.`
+   a) `Un filtro puede modificar la petición y la respuesta.`  
+   b) `Un filtro está obligado a llamar a chain.doFilter() para que la petición continúe.`  
+   c) `Es posible envolver la respuesta con HttpServletResponseWrapper para modificar su contenido.`  
+   d) `La anotación @WebFilter permite declarar un filtro sin web.xml.`  
 
 8. En el modelo arquitectónico Model 2 (MVC) para aplicaciones web, ¿qué componente recibe primero la petición?
 a) `El modelo (Model)`  
-b) `La vista (View)`
-c) `El controlador (Controller)`
-d) `La base de datos`
+b) `La vista (View)`  
+c) `El controlador (Controller)`  
+d) `La base de datos`  
 
 9. ¿Qué método de HttpServletResponse se usa para añadir una cookie en Jakarta EE?
-a) `setCookie(Cookie c)`
-b) `sendCookie(Cookie c)`
-c) `addCookie(Cookie c)`
-d) `putCookie(Cookie c)`
+a) `setCookie(Cookie c)`  
+b) `sendCookie(Cookie c)`  
+c) `addCookie(Cookie c)`  
+d) `putCookie(Cookie c)`  
 
 10. Dado el siguiente fragmento de código Thymeleaf, ¿qué muestra en el HTML?
 
 ```html
 <p th:text="${usuario.nombre}">Nombre por defecto</p>
 ```
-a) `Nombre por defecto siempre`
-b) `El valor de la variable usuario.nombre si existe, o "Nombre por defecto" en caso contrario.`
-c) `El texto literal ${usuario.nombre}.`
-d) `Una excepción porque falta el atributo th:value.`
+a) `Nombre por defecto siempre`  
+b) `El valor de la variable usuario.nombre si existe, o "Nombre por defecto" en caso contrario.`  
+c) `El texto literal ${usuario.nombre}.`  
+d) `Una excepción porque falta el atributo th:value.`  
 
 ---
 ## Parte 2 - Preguntas Cortas
