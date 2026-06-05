@@ -107,3 +107,14 @@ Diseña un filtro Jakarta EE que verifique:
 - Si no hay usuario logueado, redirige a "/login".
 
 Escribe el código completo del filtro (incluye anotación @WebFilter para que se aplique a todas las rutas /*). Usa HttpServletRequest y HttpServletResponse.
+
+**Ejercicio B (1.5 puntos) – Controlador REST en Spring**
+Implementa un controlador REST llamado ProductoController que mapee en /api/productos con los siguientes endpoints:
+
+- GET /api/productos → devuelve la lista de todos los productos (usando un ProductoRepository inyectado con @Autowired).
+
+- GET /api/productos/{id} → devuelve un producto por su id. Si no existe, lanza una excepción con ResponseStatusException(HttpStatus.NOT_FOUND).
+
+- POST /api/productos → crea un nuevo producto. Solo está permitido si en la sesión existe el atributo "user" (simula la comprobación). Si no existe, lanza HttpStatus.UNAUTHORIZED. El cuerpo de la petición es un objeto Producto (sin id). Devuelve el producto guardado con código 201.
+
+Escribe las clases necesarias (solo el código del controlador y las anotaciones). No es necesario escribir el repositorio.
