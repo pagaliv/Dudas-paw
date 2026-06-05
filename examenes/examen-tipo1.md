@@ -94,4 +94,16 @@ d) Una excepción porque falta el atributo th:value.
 
 ---
 
+## Parte III - Ejercicios de código
+**Ejercicio A (1.5 puntos)** – Filtro de autenticación y roles
+Diseña un filtro Jakarta EE que verifique:
 
+- Que exista un atributo de sesión llamado "usuario".
+
+- Que dicho atributo sea de tipo User y tenga un método getRol() que devuelva un String.
+
+- Solo se permitirá el acceso si el rol es "ADMIN". En caso contrario, se redirige a una página "/acceso-denegado".
+
+- Si no hay usuario logueado, redirige a "/login".
+
+Escribe el código completo del filtro (incluye anotación @WebFilter para que se aplique a todas las rutas /*). Usa HttpServletRequest y HttpServletResponse.
