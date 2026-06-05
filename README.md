@@ -343,7 +343,7 @@ public String doGet(req, resp) {
      return "todos";
   }else{ //si hay id
     Horario hr = horarioRepoitory.finbyId(id);
-    response.setAttribute("hr", hr);
+    request.setAttribute("hr", hr);
     return "horarioInfo" //el nombre que quieras realmente
   }
 }
