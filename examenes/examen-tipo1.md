@@ -52,10 +52,10 @@
    </div>
    ```
    
-   a) `document.querySelector("#mio img").src = "perro.png";`
-   b) `document.getElementById("mio").children[0].src = "perro.png";`
-   c) `document.getElementsByTagName("img")[1].src = "perro.png";`
-   d) `Todas las anteriores son correctas.`
+   a) `document.querySelector("#mio img").src = "perro.png";`  
+   b) `document.getElementById("mio").children[0].src = "perro.png";`   
+   c) `document.getElementsByTagName("img")[1].src = "perro.png";`  
+   d) `Todas las anteriores son correctas.`  
 
 7. **¿Cuál de las siguientes afirmaciones sobre los filtros es FALSA?**
    a) `Un filtro puede modificar la petición y la respuesta.`
@@ -64,7 +64,7 @@
    d) `La anotación @WebFilter permite declarar un filtro sin web.xml.`
 
 8. En el modelo arquitectónico Model 2 (MVC) para aplicaciones web, ¿qué componente recibe primero la petición?
-a) `El modelo (Model)`
+a) `El modelo (Model)`  
 b) `La vista (View)`
 c) `El controlador (Controller)`
 d) `La base de datos`
