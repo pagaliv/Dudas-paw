@@ -118,3 +118,20 @@ Implementa un controlador REST llamado ProductoController que mapee en /api/prod
 - POST /api/productos → crea un nuevo producto. Solo está permitido si en la sesión existe el atributo "user" (simula la comprobación). Si no existe, lanza HttpStatus.UNAUTHORIZED. El cuerpo de la petición es un objeto Producto (sin id). Devuelve el producto guardado con código 201.
 
 Escribe las clases necesarias (solo el código del controlador y las anotaciones). No es necesario escribir el repositorio.
+
+**Ejercicio C (2 puntos) – DOM y Fetch**
+Dado el siguiente HTML:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio Fetch</title>
+</head>
+<body>
+    <h1>Lista de tareas desde JSONPlaceholder</h1>
+    <button id="cargar">Cargar tareas del usuario 1</button>
+    <ul id="listaTareas"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
+```
