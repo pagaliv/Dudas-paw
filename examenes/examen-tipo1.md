@@ -56,7 +56,7 @@ b) `document.getElementById("mio").children[0].src = "perro.png";`
 c) `document.getElementsByTagName("img")[1].src = "perro.png";`
 d) `Todas las anteriores son correctas.`
 
-7. ¿Cuál de las siguientes afirmaciones sobre los filtros es FALSA?
+7. **¿Cuál de las siguientes afirmaciones sobre los filtros es FALSA?**
 a) `Un filtro puede modificar la petición y la respuesta.`
 b) `Un filtro está obligado a llamar a chain.doFilter() para que la petición continúe.`
 c) `Es posible envolver la respuesta con HttpServletResponseWrapper para modificar su contenido.`
