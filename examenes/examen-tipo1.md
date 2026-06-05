@@ -69,7 +69,7 @@
    c) `El controlador (Controller)`  
    d) `La base de datos`  
 
-9. **¿Qué método de HttpServletResponse se usa para añadir una cookie en Jakarta EE?** 
+9. **¿Qué método de HttpServletResponse se usa para añadir una cookie en Jakarta EE?**   
    a) `setCookie(Cookie c)`  
    b) `sendCookie(Cookie c)`  
    c) `addCookie(Cookie c)`  
