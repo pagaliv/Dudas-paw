@@ -468,7 +468,7 @@ let btnagr = document.getElementById("btnAgregar")
 let btneli = document.getElementById("btnEliminar")
 btnagr.disabled =false
 btneli.desabled= false 
-btnagr.addEventListener("click", addTarea())
+btnagr.addEventListener("click", addTarea)
 
 addTarea(){
   const tarea = promt("introduce tarea")
