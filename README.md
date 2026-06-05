@@ -19,7 +19,7 @@ doFilter(ServletRequest req, ServletResponse resp,FilterChain chain) {
   if (user == null) {
       redirect("login");
   }else{
-    doChain(request,resp);
+    chain.doFilter(request,resp);
   }
 }
 ```
