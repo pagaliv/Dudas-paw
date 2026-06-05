@@ -135,3 +135,6 @@ Dado el siguiente HTML:
 </body>
 </html>
 ```
+---
+## Parte IV: Ampliación (opcional, hasta 1 punto extra)
+Explica cómo modificarías el filtro del Ejercicio A para que, además de comprobar el rol, registre en un log la URL solicitada y la hora de acceso, y luego permita continuar. Escribe solo el fragmento relevante dentro del método doFilter
